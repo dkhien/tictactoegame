@@ -4,18 +4,10 @@ let time2 = 100
 let score1 = 0;
 let score2 = 0;
 function getJSON() {
-    // const options = {
-    //     method: 'GET',
-    //     headers: {
-    //         'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-    //         'X-RapidAPI-Host': 'realtor.p.rapidapi.com'
-    //     }
-    // };
-
+    //Put the link to JSON as parameter of fetch
     fetch('test.json')
         .then(response => response.json())
         .then(response => game = response)
-        // .then(response => console.log(game))
         .catch(err => console.error(err));
 }
 
@@ -39,7 +31,6 @@ function drawBoard() {
     gameBoard[0].innerHTML = gameBoardHTML;
 
 }
-
 
 function countdown() {
     if(game.turn === game.team1_id) {

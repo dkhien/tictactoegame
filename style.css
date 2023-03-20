@@ -16,6 +16,7 @@ body{
     align-items: center;
     height: 10vh;
     background-color: #ddd;
+    font-size: 1.1rem;
 }
 
 
@@ -40,11 +41,22 @@ body{
 .player1{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .player2{
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+}
+
+#player1-info{
+    padding-right: 50px;
+}
+
+#player2-info{
+    text-align: right;
+    padding-left: 50px;
 }
 
 .player1-avatar img, .player2-avatar img{

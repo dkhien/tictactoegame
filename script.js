@@ -31,13 +31,13 @@ function drawBoard() {
     for (var i = 0; i < size; i++) {
         gameBoardHTML += "<tr>"
         for (var j = 0; j < size; j++) {
-            
-            gameBoardHTML += "<td>" + game.board[i][j] +"</td>"
+            gameBoardHTML += `<td style='width:${600/size}px; height:${600/size}px; font-size:${400/size}px; font-weight: 300'>`+game.board[i][j] +"</td>"
         }
         gameBoardHTML += "</tr>";
     }
     gameBoardHTML += "</table>";
     gameBoard[0].innerHTML = gameBoardHTML;
+
 }
 
 
@@ -59,8 +59,9 @@ function render() {
     document.getElementById("player2-id").innerText = game.team2_id!=undefined ? game.team2_id : "ID2"
     document.getElementById('player1-time').innerHTML = time1
     document.getElementById('player2-time').innerHTML = time2
-    document.getElementById('score-1').innerHTML = game.score1
-    document.getElementById('score-2').innerHTML = game.score2
+    document.getElementById('score1').innerHTML = game.score1
+    document.getElementById('score2').innerHTML = game.score2
+    
 }
 
 

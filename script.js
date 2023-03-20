@@ -13,7 +13,6 @@ function getJSON() {
         .then(response => game = response)
         .then(response => console.log(game))
         .catch(err => console.error(err));
-
 }
 
 setInterval(getJSON, 1000);
@@ -23,7 +22,7 @@ function drawBoard() {
     var size = game.size;
     console.log(size);
     var gameBoard = document.getElementsByClassName("gameboard");
-    var gameBoardHTML = "<table>";
+    var gameBoardHTML = "<table cell-spacing = '0'>";
     for (var i = 0; i < size; i++) {
         gameBoardHTML += "<tr>"
         for (var j = 0; j < size; j++) {

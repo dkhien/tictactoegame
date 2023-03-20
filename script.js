@@ -1,10 +1,6 @@
 let game = {}
 let time1 = 100
 let time2 = 100
-let id1 = game.team1_id;
-let id2 = game.team2_id;
-document.getElementById("player1-id").innerText = id1!=undefined ? id1 : "ID1";
-document.getElementById("player2-id").innerText = id2!=undefined ? id2 : "ID2";
 function getJSON() {
     // const options = {
     //     method: 'GET',
@@ -24,7 +20,7 @@ function getJSON() {
 setInterval(getJSON, 1000);
 setInterval(drawBoard, 1000);
 setInterval(countdown, 1000);
-setInterval(renderTime, 1000)
+setInterval(render, 1000)
 
 function drawBoard() {
     var size = game.size;
@@ -45,19 +41,21 @@ function drawBoard() {
 
 
 function countdown() {
-    if(game.turn === id1) {
+    if(game.turn === game.team1_id) {
         document.getElementById('turn-flag-2').style.visibility = "hidden"
         document.getElementById('turn-flag-1').style.visibility = "visible"
         time1--;
     }
-    else if(game.turn === id2) {
+    else if(game.turn === game.team2_id) {
         document.getElementById('turn-flag-2').style.visibility = "visible"
         document.getElementById('turn-flag-1').style.visibility = "hidden"
         time2--;
     }
 }
 
-function renderTime() {
+function render() {
+    document.getElementById("player1-id").innerText = game.team1_id!=undefined ? game.team1_id : "ID1"
+    document.getElementById("player2-id").innerText = game.team2_id!=undefined ? game.team2_id : "ID2"
     document.getElementById('player1-time').innerHTML = time1
     document.getElementById('player2-time').innerHTML = time2
 }

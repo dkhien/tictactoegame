@@ -1,0 +1,14 @@
+{
+    "match_id": "xxx",
+    "status": "None, (draw, teamID Win) (nếu khác None sẽ in ra draw hoặc xxx Win và kết thúc).",
+        "size" : 10, 
+        "board": "[[ ], [ ], [ ] …]",
+        "time1": "100", 
+        "time2": "100", 
+    "team1_id": "xxx", 
+    "team2_id": "xxx",	
+    "turn": "xxx", 
+    "score1": "0",
+    "score2": "0"
+    
+}

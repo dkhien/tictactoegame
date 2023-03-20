@@ -26,6 +26,7 @@ body{
 
 .score2-container{
     display: flex;
+    align-items: center;
 }
 
 .turn-flag img{
@@ -61,7 +62,7 @@ body{
     background-color: #DBA078;
 }
 
-.player1-id, .player2-id{
+#player1-id, #player2-id{
     font-weight: 1000;
 }
 

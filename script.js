@@ -3,10 +3,6 @@ let time1 = 100
 let time2 = 100
 let score1 = 0;
 let score2 = 0;
-let id1 = game.team1_id;
-let id2 = game.team2_id;
-document.getElementById("player1-id").innerText = id1!=undefined ? id1 : "ID1";
-document.getElementById("player2-id").innerText = id2!=undefined ? id2 : "ID2";
 function getJSON() {
     // const options = {
     //     method: 'GET',
@@ -46,17 +42,20 @@ function drawBoard() {
 
 
 function countdown() {
-    if(game.turn === id1) {
+    if(game.turn === game.team1_id) {
         document.getElementById('turn-flag-2').style.visibility = "hidden"
         document.getElementById('turn-flag-1').style.visibility = "visible"
-        time1--;
+        time1-=1;
         time2 = 100
+        if(time1 <  0) time1 = 0
     }
-    else if(game.turn === id2) {
+    else if(game.turn === team2_id) {
         document.getElementById('turn-flag-2').style.visibility = "visible"
         document.getElementById('turn-flag-1').style.visibility = "hidden"
         time2--;
         time1 = 100
+        if(time2 <  0) time2 = 0
+
     }
 }
 

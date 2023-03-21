@@ -14,7 +14,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 10vh;
+    height: 12vh;
     background-color: #ddd;
     font-size: 1.1rem;
 }
@@ -32,6 +32,17 @@ body{
 
 .turn-flag img{
     width: 40px;
+}
+
+#match-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#match-info #match-id{
+    font-size: 0.9rem;
 }
 
 .players-container{

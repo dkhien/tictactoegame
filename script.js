@@ -4,7 +4,7 @@ let time2 = 100
 let score1 = 0;
 let score2 = 0;
 function getJSON() {
-    //Put the link to JSON as parameter of fetch
+    //TODO: Put the link to JSON as parameter of fetch
     fetch('test.json')
         .then(response => response.json())
         .then(response => game = response)
@@ -46,6 +46,7 @@ function countdown() {
 }
 
 function render() {
+    document.getElementById("match-id").innerText = `Match ID: ${game.match_id}`
     document.getElementById("player1-id").innerText = game.team1_id!=undefined ? game.team1_id : "ID1"
     document.getElementById("player2-id").innerText = game.team2_id!=undefined ? game.team2_id : "ID2"
     document.getElementById('player1-time').innerHTML = time1

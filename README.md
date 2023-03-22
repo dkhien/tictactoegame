@@ -14,7 +14,7 @@
 <li>Sử dụng terminal, cd đến thư mục "my-app" và chạy npm start </li>
 <li>Ứng dụng mặc định chạy trên cổng 3006, có thể chỉnh trong "package.json" và đổi 3306 thành port bạn mong muốn</li>
 <img src="public/resources/port.png"></img>
-<li>Script sẽ fetch JSON từ API cung cấp bới Backen và re-render trang web mỗi 1 giây</li>
+<li>Script sẽ fetch JSON từ API cung cấp bới Backend và re-render trang web mỗi 1 giây</li>
 </ol>
 
 <h4>Các thành phần của giao diện</h4>

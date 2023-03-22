@@ -1,8 +1,9 @@
 # Hướng dẫn sử dụng
 <h4>Yêu cầu</h4>
 <ul>
-<li>Cần có Node.js để chạy ứng dụng</li>
+<li>Cần có Node.js và serve để chạy ứng dụng</li>
 <li>Tải Node.js: <a href="https://nodejs.org/en/download">Link</a></li>
+<li>Install serve (global): npm install --global serve</li>
 </ul>
 
 <h4>Hướng dẫn chạy</h4>
@@ -11,7 +12,7 @@
 <li>Mở folder build</li>
 <li>Đặt link file JSON làm tham số truyền vào hàm fetch() trong hàm getJSON() trong file script.js</li>
 <img src="resources/jsonguide.png"></img>
-<li>Sử dụng terminal, cd đến thư mục "build" và chạy: serve -s .<br>
+<li>Sử dụng terminal, cd đến thư mục gốc và chạy: serve -s build<br>
 <i>Ở bước này có thể gặp lỗi, xem hướng dẫn sửa lỗi ở phần Troubleshooting phía dưới</i></li>
 <li>Script sẽ fetch JSON từ API cung cấp bới Backend và re-render trang web mỗi 1 giây</li>
 </ol>
@@ -33,5 +34,5 @@ At line:1 char:1
 <li>Chạy command: Get-ExecutionPolicy</li>
 <li>Nếu execution policy hiện tại là "Restricted", chạy: Set-ExecutionPolicy RemoteSigned</li>
 <li>Gõ 'Y' và ấn Enter</li>
-<li>Chạy lại serve -s .</li>
+<li>Chạy lại serve -s build</li>
 </ol>

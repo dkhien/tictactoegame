@@ -1,6 +1,9 @@
 # Hướng dẫn sử dụng
 <h4>Yêu cầu</h4>
-<span>Cần có npm để chạy ứng dụng</span>
+<ul>
+<li>Cần có Node.js để chạy ứng dụng</li>
+<li>Tải Node.js: <a href="https://nodejs.org/en/download">Link</a></li>
+</ul>
 
 <h4>Hướng dẫn chạy</h4>
 <ol>

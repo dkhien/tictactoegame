@@ -11,7 +11,7 @@
 <li>Mở folder build</li>
 <li>Đặt link file JSON làm tham số truyền vào hàm fetch() trong hàm getJSON() trong file script.js</li>
 <img src="resources/jsonguide.png"></img>
-<li>Sử dụng terminal, cd đến thư mục "build" và chạy: serve -s build<br>
+<li>Sử dụng terminal, cd đến thư mục "build" và chạy: serve -s .<br>
 <i>Ở bước này có thể gặp lỗi, xem hướng dẫn sửa lỗi ở phần Troubleshooting phía dưới</i></li>
 <li>Script sẽ fetch JSON từ API cung cấp bới Backend và re-render trang web mỗi 1 giây</li>
 </ol>
@@ -33,5 +33,5 @@ At line:1 char:1
 <li>Chạy command: Get-ExecutionPolicy</li>
 <li>Nếu execution policy hiện tại là "Restricted", chạy: Set-ExecutionPolicy RemoteSigned</li>
 <li>Gõ 'Y' và ấn Enter</li>
-<li>Chạy lại serve -s build</li>
+<li>Chạy lại serve -s .</li>
 </ol>

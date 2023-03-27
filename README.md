@@ -11,13 +11,13 @@
 <li>Chạy sẵn Backend cung cấp file JSON</li>
 <li>Mở file <i>script.js</i> trong folder <i>build</i></li>
 <li>Đặt link API Backend làm tham số truyền vào hàm fetch trong hàm getJSON trong file <i>script.js</i></li>
-<img src="resources/jsonguide.png"></img>
+<img src="public/resources/jsonguide.png"></img>
 <li>Sử dụng terminal, cd đến thư mục gốc (thư mục cha của <i>build</i>) và chạy: <pre>serve -s build</pre>
 <li>Script sẽ fetch JSON từ API cung cấp bởi Backend và re-render trang web mỗi 1 giây</li>
 </ol>
 
 <h3>Các thành phần của giao diện</h3>
-<img src="resources/guide.png"></img>
+<img src="public/resources/guide.png"></img>
 
 <h3>Troubleshooting (Windows)</h3>
 <p>Ở bước 4, nếu gặp lỗi: <pre>serve : File C:\...\serve.ps1 cannot be loaded because running scripts is disabled on this system. For more 

@@ -3,6 +3,7 @@ import React from 'react';
 class App extends React.Component() {
     render() {
         return (
+            
             <div className="App">
                 <div class="scoreboard">
                     <div class="score1-container">
@@ -43,6 +44,9 @@ class App extends React.Component() {
                             <img src="resources/flag.png" alt="" />
                         </div>
                     </div>
+                </div>
+                <div id="status-container">
+                    <h3></h3>
                 </div>
                 <div class="gameboard-container">
                     <div class="gameboard">

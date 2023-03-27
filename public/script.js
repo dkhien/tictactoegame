@@ -2,16 +2,15 @@ let game = {}
 
 function getJSON() {
     //TODO: Put the link to JSON as parameter of fetch
-    fetch('http://localhost:3000/')
+    fetch('http://localhost:3002/')
         .then(response => response.json())
         .then(response => game = response)
         .catch(err => console.error(err));
+    drawBoard();
+    render();
 }
 
 setInterval(getJSON, 1000);
-setInterval(drawBoard, 1000);
-setInterval(countdown, 1000);
-setInterval(render, 1000)
 
 function drawBoard() {
     var size = game.size;
@@ -31,7 +30,7 @@ function drawBoard() {
 
 }
 
-function countdown() {
+function render() {
     if (game.turn === game.team1_id) {
         document.getElementById('turn-flag-2').style.visibility = "hidden"
         document.getElementById('turn-flag-1').style.visibility = "visible"
@@ -40,9 +39,6 @@ function countdown() {
         document.getElementById('turn-flag-2').style.visibility = "visible"
         document.getElementById('turn-flag-1').style.visibility = "hidden"
     }
-}
-
-function render() {
     document.getElementById("match-id").innerText = `Match ID: ${game.match_id}`
     document.getElementById("player1-id").innerText = game.team1_id != undefined ? game.team1_id : "ID1"
     document.getElementById("player2-id").innerText = game.team2_id != undefined ? game.team2_id : "ID2"
@@ -50,6 +46,7 @@ function render() {
     document.getElementById('player2-time').innerHTML = game.time2
     document.getElementById('score1').innerHTML = game.score1
     document.getElementById('score2').innerHTML = game.score2
+    document.getElementById('status').innerText = game.status == "None" ? "" : game.status
 
 }
 

@@ -10,10 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
     <title>Tic Tac Toe Game</title>
+    
 </head>
 
 <body>
-
+    
+    <div id="root"></div>
     <div class="scoreboard">
         <div class="score1-container">
             <div id="score1"></div>
@@ -57,7 +59,11 @@
     <div id="status-container">
         <h3 id="status"></h3>
     </div>
-    <div class="gameboard-container">
+    <div id="gameboard-container">
+        <div id="roomid-input-container">
+            <input type="text" id="roomIdInput" placeholder="Enter Room ID">
+            <button id="roomIdSubmit">Submit</button>
+        </div>
         <div class="gameboard">
 
         </div>

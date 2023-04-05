@@ -1,18 +1,30 @@
+const api = 'http://localhost:3002/'
 let game = {}
+let roomId = undefined;
+
+document.getElementById("roomIdSubmit").addEventListener('click', handleSubmitRoomId)
+
+function handleSubmitRoomId(){
+    const roomIdInput = document.getElementById("roomIdInput")
+    roomId = roomIdInput.value;
+}
 
 function getJSON() {
     //TODO: Put the link to JSON as parameter of fetch
-    fetch('http://localhost:3002/')
+    fetch(api)
         .then(response => response.json())
         .then(response => game = response)
         .catch(err => console.error(err));
-    drawBoard();
+    if(game.room_id===roomId && game.room_id !== undefined){
+        drawBoard();
+    } 
     render();
 }
 
 setInterval(getJSON, 1000);
 
 function drawBoard() {
+    document.getElementById("roomid-input-container").style.display="none";
     var size = game.size;
     var gameBoard = document.getElementsByClassName("gameboard");
     var gameBoardHTML = "<table cell-spacing = '0'>";
